@@ -14,5 +14,12 @@ vector<vector<int>>adj(n+1,vector<int>(n+1,0));
     adj[v][u]=1;
 
   }
+   cout << "\nAdjacency Matrix:\n";
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            cout << adj[i][j] << " ";
+        }
+        cout << endl;
+    }
   return 0;
 }

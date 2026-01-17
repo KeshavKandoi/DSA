@@ -47,8 +47,15 @@ int main(){
   adj[u].push_back(v);
   adj[v].push_back(u);
   }
-  bool ans=cyclic(adj,1);
-
+   // -------- COMPONENT ADDITION ONLY --------
+  bool ans = false;
+  for(int i = 1; i <= n; i++){
+      if(cyclic(adj, i)){
+          ans = true;
+          break;
+      }
+  }
+  
 
     if (ans==true){
         cout << "Cycle exists\n";
