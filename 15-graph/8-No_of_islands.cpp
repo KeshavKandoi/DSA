@@ -62,6 +62,11 @@ int main() {
 
     cout << "Number of islands = " << island(grid) << endl;
 }
+
+
+
+
+
 // 4 direction 
 /*class Solution {
     private:
