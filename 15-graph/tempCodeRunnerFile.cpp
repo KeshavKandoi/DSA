@@ -1,24 +1,26 @@
-  // Step 2: Relax all edges (n-1) times
-    for (int i = 1; i <= n - 1; i++) {
-        for (auto it : edges) {
-            int u = it[0];
-            int v = it[1];
-            int w = it[2];
+#include<iostream>
+#include<vector>
+using namespace std;
 
-            if (dis[u] != INT_MAX && dis[u] + w < dis[v]) {
-                dis[v] = dis[u] + w;
-            }
-        }
-    }
-
-    // Step 3: Check for negative weight cycle
-    for (auto it : edges) {
-        int u = it[0];
-        int v = it[1];
-        int w = it[2];
-
-        if (dis[u] != INT_MAX && dis[u] + w < dis[v]) {
-            cout << "Graph contains a negative weight cycle\n";
-            return;
-        }
-    }
+int main(){
+  cout<<"Enter the value of n and m"<<endl;
+  int n,m;
+  cin>>n>>m;
+  vector<int>adj[n+1];
+  for(int i=0;i<m;i++){
+    int u,v;
+    cout<<"Enter the value of u and v"<<endl;
+    cin>>u>>v;
+    adj[u].push_back(v);
+    adj[v].push_back(u);
+  }
+  cout << "\nAdjacency List:\n"; 
+  for(int i = 1; i <= n; i++){
+     cout << i << " -> ";
+      for(int j = 0; j < adj[i].size(); j++){
+         cout << adj[i][j] << " ";
+         }
+          cout << endl; 
+          } 
+          return 0; 
+          }
