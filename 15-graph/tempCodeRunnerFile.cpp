@@ -1,26 +1,57 @@
+
 #include<iostream>
 #include<vector>
+#include<queue>
 using namespace std;
 
+vector<int>vec(vector<vector<int>>&list,int v){
+    vector<int>adj(v,0);
+    adj[0]=1;
+
+    queue<int>q;
+    q.push(0);
+    vector<int>bfs;
+
+    while(!q.empty()){
+        int node=q.front();
+        bfs.push_back(node);
+        q.pop();
+
+        for(auto it:list[node]){
+            if(!adj[it]){
+                adj[it]=1;
+                q.push(it);
+                
+            }
+        }
+
+
+    }
+    return bfs;
+
+
+}
+
 int main(){
-  cout<<"Enter the value of n and m"<<endl;
-  int n,m;
-  cin>>n>>m;
-  vector<int>adj[n+1];
-  for(int i=0;i<m;i++){
-    int u,v;
-    cout<<"Enter the value of u and v"<<endl;
-    cin>>u>>v;
-    adj[u].push_back(v);
-    adj[v].push_back(u);
-  }
-  cout << "\nAdjacency List:\n"; 
-  for(int i = 1; i <= n; i++){
-     cout << i << " -> ";
-      for(int j = 0; j < adj[i].size(); j++){
-         cout << adj[i][j] << " ";
-         }
-          cout << endl; 
-          } 
-          return 0; 
-          }
+    int n,m;
+    cout<<"enter the value of node(n) and edge(m)"<<endl;
+    cin>>n>>m;
+
+    vector<vector<int>>list(n);
+
+    for(int i=0;i<m;i++){
+        int u,v;
+        cout<<"enter the value of u and v"<<endl;
+        cin>>u>>v;
+
+        list[u].push_back(v);
+        list[v].push_back(u);
+
+    }
+    vector<int>ans=vec(list,n);
+
+    for(int i=0;i<ans.size();i++){
+        cout<<ans[i]<<endl;
+    }
+
+}
