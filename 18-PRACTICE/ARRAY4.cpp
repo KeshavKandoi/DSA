@@ -1,22 +1,23 @@
-// Largest Element
-
 #include<iostream>
+#include<vector>
 using namespace std;
-#include <vector>
 
-int largest(vector<int>&arr){
+int Duplicate(vector<int>&arr){
   int n=arr.size();
 
-int num = arr[0];
+  int i=0;
 
-  for(int i=1;i<n;i++){
-    if(num<=arr[i]){
-      num=arr[i];
+  for(int j=1;j<n;j++){
+    if(arr[j]!=arr[i]){
+      i++;
+
+      arr[i]=arr[j];
+      
     }
-
   }
-  return num;
+  return i+1;
 }
+
 
 int main(){
 int n;
@@ -40,8 +41,8 @@ for(int i=0;i<n;i++){
   cout<<" ";
 }
 cout<<endl;
-int value=largest(arr);
+int value=Duplicate(arr);
 
-cout<<"The largest value is "<<value<<endl;
+cout<<"The len  value is "<<value<<endl;
 
 }
