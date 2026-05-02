@@ -15,7 +15,12 @@ using namespace std;
       }
 
     }
-     return count <= 1;
+     if (count<=1){
+      return true;
+     }
+     else{
+      return false;
+     }
 
 }
 
@@ -47,3 +52,4 @@ cout<<endl;
         cout << "false";
     }
 }
+
