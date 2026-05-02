@@ -1,3 +1,4 @@
+// Remove duplicates from Sorted array
 #include<iostream>
 #include<vector>
 using namespace std;

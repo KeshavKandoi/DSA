@@ -1,3 +1,4 @@
+// Linear Search in C
 #include<iostream>
 #include<vector>
 using namespace std;
