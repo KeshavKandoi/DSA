@@ -56,78 +56,78 @@ int value = print(arr);
 }
 
 
-// printing
+//  printing
 
-#include<iostream>
-#include<vector>
+// #include<iostream>
+// #include<vector>
 
-using namespace std;
+// using namespace std;
 
-void print(vector<int>& nums) {
+// void print(vector<int>& nums) {
 
-    int n = nums.size();
+//     int n = nums.size();
 
-    int start = 0;
-    int ansstart = 0;
-    int ansend = 0;
+//     int start = 0;
+//     int ansstart = 0;
+//     int ansend = 0;
 
-    long long sum = 0;
-    long long maximum = nums[0];
+//     long long sum = 0;
+//     long long maximum = nums[0];
 
-    for(int i = 0; i < n; i++) {
+//     for(int i = 0; i < n; i++) {
 
-        if(sum == 0) {
-            start = i;
-        }
+//         if(sum == 0) {
+//             start = i;
+//         }
 
-        sum += nums[i];
+//         sum += nums[i];
 
-        if(sum > maximum) {
+//         if(sum > maximum) {
 
-            maximum = sum;
+//             maximum = sum;
 
-            ansstart = start;
-            ansend = i;
-        }
+//             ansstart = start;
+//             ansend = i;
+//         }
 
-        if(sum < 0) {
-            sum = 0;
-        }
-    }
+//         if(sum < 0) {
+//             sum = 0;
+//         }
+//     }
 
-    cout << "The maximum sum is: " << maximum << endl;
+//     cout << "The maximum sum is: " << maximum << endl;
 
-    cout << "The subarray is: ";
+//     cout << "The subarray is: ";
 
-    for(int i = ansstart; i <= ansend; i++) {
-        cout << nums[i] << " ";
-    }
+//     for(int i = ansstart; i <= ansend; i++) {
+//         cout << nums[i] << " ";
+//     }
 
-    cout << endl;
-}
+//     cout << endl;
+// }
 
-int main() {
+// int main() {
 
-    int n;
+//     int n;
 
-    cout << "Enter the size of array" << endl;
-    cin >> n;
+//     cout << "Enter the size of array" << endl;
+//     cin >> n;
 
-    vector<int> arr(n);
+//     vector<int> arr(n);
 
-    cout << "Enter the array" << endl;
+//     cout << "Enter the array" << endl;
 
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
 
-    cout << "The array is " << endl;
+//     cout << "The array is " << endl;
 
-    for(int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
 
-    cout << endl;
+//     cout << endl;
 
-    print(arr);
-}
+//     print(arr);
+// }
