@@ -2,3 +2,5 @@ tempCodeRunnerFile*
 tempCodeRunnerFile
 tempCodeRunnerFile.cpp
 *.python
+.DS_Store
+**/.DS_Store
