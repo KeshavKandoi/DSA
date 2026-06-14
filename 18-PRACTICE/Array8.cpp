@@ -20,6 +20,10 @@ for(int j=0;j<m;j++){
 
 vector<int>ans;
 
+// for(auto it = st.begin(); it != st.end(); it++){
+//     ans.push_back(*it);
+// }
+
 for(int x:s){
   ans.push_back(x);
 }
