@@ -1,3 +1,4 @@
+// pascal finding digit with row and column number
 #include <iostream>
 using namespace std;
 
