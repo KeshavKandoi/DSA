@@ -4,7 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-    string prefixToPostfix(const string& s) {
+    string prefixToPostfix( string s) {
         int n=s.size();
         int i=n-1;
           stack<string>st;
