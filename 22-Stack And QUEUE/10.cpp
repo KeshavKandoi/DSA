@@ -1,4 +1,7 @@
 // prefixToInfix
+
+// In **Prefix to Infix** and **Prefix to Postfix** conversion, we scan the expression **from right to left** because the **operator appears before its operands**. Scanning from the right ensures that when an operator is encountered, its two operands are already available on the stack. We can then pop the operands, combine them, and push the result back onto the stack.
+
 #include<iostream>
 #include<stack>
 #include <algorithm>
