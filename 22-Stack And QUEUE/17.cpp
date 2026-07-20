@@ -1,5 +1,5 @@
 
-// Number of Greater Elements to the Right
+// Number of Greater Elements to  Right
 
 
 #include<iostream>
