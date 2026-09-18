@@ -53,6 +53,7 @@ int main() {
         cout << ans[i] << " ";
     }
 
+    
     cout << endl;
 
     int k = removeDuplicates(ans);
